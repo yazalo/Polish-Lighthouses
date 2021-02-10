@@ -1,0 +1,3 @@
+NAME		:Polish Lighthouses
+VERSION 	:0.1-beta
+URL			:https://openttd-polska.pl/Thread-Inne-Polskie-latarnie-morskie

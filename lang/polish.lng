@@ -3,7 +3,7 @@
 
 # GRF name and description definitions
 STR_GRF_NAME        		:Polskie latarnie morskie ({NAME} {VERSION})
-STR_GRF_DESCRIPTION 		:Zestaw latarń morskich wzorowanych na prawdziwych latarniach z polskiego wybrzeża{}{COPYRIGHT} yazalo, 2021{}Licencja: GPL v3{}Szczegóły na: {URL}
+STR_GRF_DESCRIPTION 		:Zestaw latarń morskich wzorowanych na prawdziwych latarniach z polskiego wybrzeża{}{COPYRIGHT} yazalo, 2021{}Licencja: GPL v3
 STR_GRF_URL					:https://openttd-polska.pl/Thread-Inne-Polskie-latarnie-morskie
 
 # Parameters

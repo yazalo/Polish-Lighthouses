@@ -3,7 +3,7 @@
 
 # GRF name and description definitions
 STR_GRF_NAME        		:Polish Lighthouses by yazalo (v {VERSION})
-STR_GRF_DESCRIPTION 		:Set of lighthouses based on real lighthouses from the Polish coast.{}Drawn, coded and {COPYRIGHT} by yazalo{}License: GPL v3{}For details, see: {URL}
+STR_GRF_DESCRIPTION 		:Set of lighthouses based on real lighthouses from the Polish coast.{}Drawn, coded and {COPYRIGHT} by yazalo{}License: GPL v3
 STR_GRF_URL					:{URL}
 
 # Parameters
@@ -42,8 +42,8 @@ STR_LH_ROZEWIE_OLD			:Old lighthouse from Rozewie
 STR_LH_ROZEWIE_NEW			:New lighthouse from Rozewie
 STR_LH_JASTARNIA			:Lighthouse from Jastarnia
 STR_LH_HEL					:Lighthouse from Hel
-STR_LH_GDANSK_NEW			:Gdańsk Nowy Port Lighthouse
-STR_LH_GDANSK_NORTH			:Gdańsk Port Północny Lighthouse
+STR_LH_GDANSK_NEW			:Gdańsk New Port Lighthouse
+STR_LH_GDANSK_NORTH			:Gdańsk Northen Port Lighthouse
 STR_LH_KRYNICA				:Lighthouse from Krynica Morska
 # Polish lighthouses abroad
 STR_LH_ARCTOWSKI			:Lighthouse of the Polish polar station Arctowski in Antarctica
@@ -68,11 +68,11 @@ STR_LH_GASKI_DESC			:The second highest brick lighthouse on the Polish coast. No
 STR_LH_DARLOWO_DESC			:Specifically, it is located in Darłówek, which is a district of Darłowo. Like most other lighthouses, it is open to the public.
 STR_LH_JAROSLAWIEC_DESC		:The lighthouse was built in 1829 and rebuilt in 1902. The last lighthouse from the west in the West Pomeranian Voivodeship.
 STR_LH_USTKA_DESC			:This lighthouse has not undergone any major rebuilding since it was built in 1892.
-STR_LH_CZOLPINO_DESC		:The tower is situated on one of the highest dunes in the Slovinski National Park. It has been available for tourists since 1994. 
+STR_LH_CZOLPINO_DESC		:The tower is situated on one of the highest dunes in the Słowiński National Park. It has been available for tourists since 1994. 
 STR_LH_STILO_DESC			:The lighthouse was built about a kilometre from the sea, but thanks to its location on top of the dune, its light can be seen from there anyway.
 STR_LH_ROZEWIE_OLD_DESC		:The old Rozewie lighthouse (from 1822) is still in use today. (It was raised in 1910 and 1978).
 STR_LH_ROZEWIE_NEW_DESC		:The new lighthouse in Rozewie functioned only from 1875 to 1910, simultaneously with the old one.
-STR_LH_JASTARNIA_DESC		:As one of the three lighthouses (along with Kikut and Gdańsk Port Północny) it is not open to the public. It is the smallest on the Polish coast.
+STR_LH_JASTARNIA_DESC		:As one of the three lighthouses (along with Kikut and Gdańsk Northen Port) it is not open to the public. It is the smallest on the Polish coast.
 STR_LH_HEL_DESC				:The first lighthouse was built here in 1826. Since then, there has always been light on Hel at night (only for 3 years during the war it was not so).
 STR_LH_GDANSK_NEW_DESC		:A historic, disused lighthouse, open to the public. It was modelled on the now defunct Cleveland lighthouse in the United States. 
 STR_LH_GDANSK_NORTH_DESC	:The youngest lighthouse on the Polish coast (1984). It is the only lighthouse with a lift, however it is not open to visitors.
@@ -86,6 +86,6 @@ STR_LH_GDYNIA_OKSYWIE_DESC	:It was extinguished in 1933 and destroyed in 1939. T
 STR_LH_JASTARNIA_BOR_DESC	:It was extinguished in 1936 (replaced by Szwed's Mountain lighthouse), and destroyed in 1939.
 STR_LH_SOPOT_DESC			:Since 1999 it is not formally a lighthouse but it still illuminates the waters of Gdańsk Bay.
 # Lighthouse similar objects
-STR_STAWA_MLYNY_DESC		:The well-known "Wiatrak", a permanent feature in the landscape of Świnoujście.
+STR_STAWA_MLYNY_DESC		:The well-known "Wiatrak" [English: Windmill], a permanent feature in the landscape of Świnoujście.
 STR_WISLOUJSCIE_DESC		:Its tower served as a lighthouse until 1758. The fortress itself was of military importance until the 19th century.
 STR_BLIZA_DESC				:A wooden crane with a suspended boiler for fire. Used as lighthouses since the Middle Ages.

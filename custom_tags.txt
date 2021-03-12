@@ -1,3 +1,3 @@
 NAME		:Polish Lighthouses
-VERSION 	:0.1.2
+VERSION 	:0.1.1
 URL			:https://www.tt-forums.net/viewtopic.php?f=26&t=88514&p=1241419#p1241419

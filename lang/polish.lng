@@ -2,8 +2,8 @@
 # This is the Polish language file
 
 # GRF name and description definitions
-STR_GRF_NAME        		:Polskie latarnie morskie ({NAME} {VERSION})
-STR_GRF_DESCRIPTION 		:Zestaw latarń morskich wzorowanych na prawdziwych latarniach z polskiego wybrzeża{}{COPYRIGHT} yazalo, 2021{}Licencja: GPL v3
+STR_GRF_NAME        		:{NAME} by yazalo (v {VERSION}) - Polskie latarnie morskie
+STR_GRF_DESCRIPTION 		:Zestaw latarń morskich wzorowanych (nie tylko) na prawdziwych latarniach z polskiego wybrzeża{}{COPYRIGHT} yazalo, 2021-2022{}Licencja: GPL v3 / CC BY-SA 4.0
 STR_GRF_URL					:https://openttd-polska.pl/Thread-Inne-Polskie-latarnie-morskie
 
 # Parameters
@@ -21,9 +21,28 @@ STR_REBUILT_LHS				:Przebudowane latarnie
 STR_REBUILT_LHS_DESC		:Połączenie opcji "Automatyczna przebudowa" i "Obiekty zawsze dostępne" spowoduje, że latarnia pojawi się w danym miejscu dopiero w momencie wybudowania w realnym świecie, nawet, jeśli w grze umieszczono ją tam wcześniej.{}Automatyczna przebudowa uwzględnia także "wyburzanie" latarni, które w rzeczywistości już nie istnieją, jeśli na ich miejscu nie powstały nowe. {RED}Niezalecane w połączeniu z ustawieniem parametru "Nieusuwalne obiekty" na "wszystkie". {BLACK}(Pozostaną tam ruiny).
 STR_AS_SEPARATE_OBJECTS		:dawny wygląd latarni dostępny jako osobny obiekt
 STR_REBUILD_AUTOMATICALLY	:automatyczna przebudowa wg rzeczywistych dat
+STR_FIXED_ANIM				:Fikcyjne animacje w latarniach ze światłem stałym
+STR_FIXED_ANIM_DESC			:Domyślnie (kiedy to ustawienie jest wyłączone) latarnie, które w rzeczywistości świecą światłem stałym, w grze także są tak zaprogramowane.{}Włączenie tego ustawienia wprowadza fikcyjne animacje do tych latarni.{}(To ustawienie wpływa tylko na te nieliczne latarnie, które w rzeczywistości świecą światłem stałym)
+STR_BASE_ANIM_SPEED			:Bazowa prędkość animacji
+STR_BASE_ANIM_SPEED_DESC	:To ustawienie pozwala zmienić bazową prędkość animacji. Ustawiona tu prędkość może być modyfikowana mnożnikiem z innego ustawienia.
+STR_BASE_ANIM_SPEED_REAL	:realistyczna
+STR_BASE_ANIM_SPEED_UNI		:ujednolicona
+STR_ANIM_SPEED				:Mnożnik prędkości animacji
+STR_ANIM_SPEED_DESC			:Pozwala dodatkowo przyspieszyć lub spowolnić animacje w latarniach w pewnych granicach.
+STR_ANIM_SPEED_1_16			:{RED}x1/16
+STR_ANIM_SPEED_1_8			:{RED}x1/8
+STR_ANIM_SPEED_1_4			:{RED}x1/4
+STR_ANIM_SPEED_1_2			:x1/2 (spowolnione)
+STR_ANIM_SPEED_1			:{GREEN}x1
+STR_ANIM_SPEED_2			:x2 (przyspieszone)
+STR_ANIM_SPEED_4			:x4
+STR_ANIM_SPEED_8			:x8
+STR_ANIM_SPEED_16			:{RED}x16
+STR_ANIM_SPEED_32			:{RED}x32
 
 # Category name
 STR_POLISH_LIGHTHOUSES		:Polskie latarnie morskie
+STR_BALTIC_LIGHTHOUSES		:Inne nadbałtyckie latarnie morskie
 
 # Object names
 
@@ -57,20 +76,24 @@ STR_LH_SOPOT				:Latarnia morska z Sopotu
 STR_STAWA_MLYNY				:Stawa Młyny (Świnoujście)
 STR_WISLOUJSCIE				:Twierdza Wisłoujście
 STR_BLIZA					:Bliza
+# Lighthouses outside Poland
+STR_LH_RONNE				:Latarnia morska z Rønne (Bornholm, Dania)
+STR_LH_DUEODDE				:Latarnia morska z Dueodde (Bornholm, Dania)
+STR_LH_BALTIJSK				:Latarnia morska z Bałtyjska (Obwód Kaliningradzki, Rosja)
 
 # Object descriptions
 
 # Polish coast existing lighthouses
 STR_LH_SWINOUJSCIE_DESC		:Najwyższa latarnia morska w Polsce (64,8 metra). Na szczyt prowadzi 308 schodów, już od 2000 roku latarnia jest udostępniona do zwiedzania.
-STR_LH_KIKUT_DESC			:W pełni zautomatyzowana latarnia na wzgórzu Kikut (w gminie Międzyzdroje). Nie jest udostępniona do zwiedzania.
+STR_LH_KIKUT_DESC			:Ta niezbyt wysoka latarnia świeci najwyżej nad poziomem morza ze wszystkich w Polsce. To dzięki umieszczeniu jej na wzniesieniu.
 STR_LH_NIECHORZE_DESC		:Latarnia w Niechorzu ze swoim ogrodem, jest wpisana do rejestru zabytków. W jej pobliżu znajduje się Park Miniatur Latarni Morskich.
 STR_LH_KOLOBRZEG_DESC		:Światło w tym miejscu palono już od 1666 roku. Obecny budynek stoi na fundamentach fortu z czasów II wojny światowej.
 STR_LH_GASKI_DESC			:Druga pod względem wysokości murowana latarnia polskiego wybrzeża. Nie została zburzona podczas wojny, ma już ponad 140 lat.
-STR_LH_DARLOWO_DESC			:Konkretnie znajduje się w Darłówku, które jest dzielnicą Darłowa. Podobnie jak większość pozostałych latarni, jest udostępniona do zwiedzania.
+STR_LH_DARLOWO_DESC			:Ta latarnia bywa zalewana podczas sztormów, a zimą jej północna ściana jest skuta lodem. Z tego powodu mur ma tam ponad pół metra grubości.
 STR_LH_JAROSLAWIEC_DESC		:Latarnię zbudowano w 1829 roku, a w 1902 roku została przebudowana. Ostatnia latarnia od zachodu w województwie zachodniopomorskim.
 STR_LH_USTKA_DESC			:Latarnia ta nie uległa żadnej większej przebudowie od czasu swojego powstania, czyli 1892 roku.
 STR_LH_CZOLPINO_DESC		:Wieża usytuowana jest na jednej z najwyższych wydm Słowińskiego Parku Narodowego. Dostępna dla turystów od 1994 roku. 
-STR_LH_STILO_DESC			:Latarnię wybudowano około kilometr od morza, jednak dzięki usytuowaniu na wierzchołku wydmy, stamtąd i tak widać jej światło.
+STR_LH_STILO_DESC			:Tę całkowicie metalową latarnię wybudowano około kilometr od morza, jednak dzięki usytuowaniu na wierzchołku wydmy, stamtąd i tak widać jej światło.
 STR_LH_ROZEWIE_OLD_DESC		:Stara latarnia w Rozewiu (z 1822 roku) funkcjonuje do dziś. (Podwyższano ją w 1910 roku i 1978 roku).
 STR_LH_ROZEWIE_NEW_DESC		:Nowa latarnia w Rozewiu funkcjonowała tylko w latach 1875-1910, równocześnie ze starą.
 STR_LH_JASTARNIA_DESC		:Jako jedna z trzech latarni (obok latarń Kikut i Gdańsk Port Północny) nie jest udostępniona do zwiedzania. Jest najdrobniejsza na polskim wybrzeżu.
@@ -89,4 +112,8 @@ STR_LH_SOPOT_DESC			:Od 1999 roku nie jest formalnie latarnią morską, lecz wci
 # Lighthouse similar objects
 STR_STAWA_MLYNY_DESC		:Znany wszystkim "Wiatrak", na stałe wpisany w krajobraz Świnoujścia.
 STR_WISLOUJSCIE_DESC		:Jej wieża do 1758 roku służyła jako latarnia morska. Sama twierdza aż do XIX wieku miała znaczenie militarne.
-STR_BLIZA_DESC				:Drewniany żuraw z podwieszanym kotłem na ogień. Stosowane w roli latarni morskich już od średniowiecza.
+STR_BLIZA_DESC				:Prosta latarnia morska, w której źródłem światła jest płonący otwarty ogień. Stosowana do oświetlania drogi statkom już od średniowiecza.
+# Lighthouses outside Poland
+STR_LH_RONNE_DESC			:Rønne to największe miasto na Bornholmie, wyspie należącej do Danii. W 1880 roku firma H. Wichmann & Co. zbudowała tutaj latarnię morską.
+STR_LH_DUEODDE_DESC			:Zbudowana w 1962 roku latarnia, będąca najwyższą na Bornholmie i w całej Danii. To także jednyna bornholmska latarnia dostępna do zwiedzania.
+STR_LH_BALTIJSK_DESC		:Latarnia morska zlokalizowana w Bałtyjsku, oświetlająca statkom drogę na wody Zalewu Wiślanego.

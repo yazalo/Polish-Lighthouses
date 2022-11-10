@@ -2,8 +2,8 @@
 # This is the English language file
 
 # GRF name and description definitions
-STR_GRF_NAME        		:Polish Lighthouses by yazalo (v {VERSION})
-STR_GRF_DESCRIPTION 		:Set of lighthouses based on real lighthouses from the Polish coast.{}Drawn, coded and {COPYRIGHT} by yazalo{}License: GPL v3
+STR_GRF_NAME        		:{NAME} by yazalo (v {VERSION})
+STR_GRF_DESCRIPTION 		:Set of lighthouses based on real lighthouses from (not only) the Polish coast.{}Drawn, coded and {COPYRIGHT} by yazalo, 2021-2022{}License: GPL v3 / CC BY-SA 4.0
 STR_GRF_URL					:{URL}
 
 # Parameters
@@ -18,12 +18,31 @@ STR_IRREMOVABLE_ALL			:all objects
 STR_ALWAYS_AV				:Always available objects
 STR_ALWAYS_AV_DESC			:Enabling this function will make objects from this set always available. Normally they will be available according to their actual construction (& demolition) dates.
 STR_REBUILT_LHS				:Rebuilt lighthouses
-STR_REBUILT_LHS_DESC		:The conjunction of "Auto-Rebuilding" and "Always Available Objects" will cause a lighthouse to show up at a given location only when built in the real world, even if it was placed there earlier in the game.{}Automatic Rebuild also takes into account the "demolition" of lighthouses that no longer exist in reality, if no new ones have been built in their place. {RED}Not recommended in combination with setting the "Irremovable objects" parameter to "all". {BLACK}(Ruins will remain there)
+STR_REBUILT_LHS_DESC		:The conjunction of 'Auto-Rebuilding' and 'Always Available Objects' will cause a lighthouse to show up at a given location only when built in the real world, even if it was placed there earlier in the game.{}Automatic Rebuild also takes into account the 'demolition' of lighthouses that no longer exist in reality, if no new ones have been built in their place. {RED}Not recommended in combination with setting the 'Irremovable objects' parameter to 'all'. {BLACK}(Ruins will remain there)
 STR_AS_SEPARATE_OBJECTS		:the old lighthouse look available as a separate object
 STR_REBUILD_AUTOMATICALLY	:Auto-rebuilding according to actual dates
+STR_FIXED_ANIM				:Fictional animations in lighthouses with fixed light
+STR_FIXED_ANIM_DESC			:Default (when this setting is off) lighthouses that in real life have a fixed light have also fixed light in the game.{}Turning this setting on adds fictional animations to these lighthouses.{}(This setting has an effect only on the few lighthouses that in real life have a fixed light.)
+STR_BASE_ANIM_SPEED			:Base animation speed
+STR_BASE_ANIM_SPEED_DESC	:This setting allows to change the base animation speed. The speed set here can be modified by a multiplier from another setting.
+STR_BASE_ANIM_SPEED_REAL	:realistic
+STR_BASE_ANIM_SPEED_UNI		:unified
+STR_ANIM_SPEED				:Animation speed multiplier
+STR_ANIM_SPEED_DESC			:Allows to further speed up or slow down animations in lighthouses within some limits.
+STR_ANIM_SPEED_1_16			:{RED}x1/16
+STR_ANIM_SPEED_1_8			:{RED}x1/8
+STR_ANIM_SPEED_1_4			:{RED}x1/4
+STR_ANIM_SPEED_1_2			:x1/2 (slower)
+STR_ANIM_SPEED_1			:{GREEN}x1
+STR_ANIM_SPEED_2			:x2 (faster)
+STR_ANIM_SPEED_4			:x4
+STR_ANIM_SPEED_8			:x8
+STR_ANIM_SPEED_16			:{RED}x16
+STR_ANIM_SPEED_32			:{RED}x32
 
 # Category name
 STR_POLISH_LIGHTHOUSES		:Polish lighthouses
+STR_BALTIC_LIGHTHOUSES		:Other Baltic Sea lighthouses
 
 # Object names
 
@@ -49,17 +68,22 @@ STR_LH_KRYNICA				:Lighthouse from Krynica Morska
 STR_LH_ARCTOWSKI			:Lighthouse of the Polish polar station Arctowski in Antarctica
 STR_LH_HORNSUND				:Lighthouse of the Polish polar station Hornsund in the Arctic
 # Historical lighthouses
-STR_LH_GORA_SZWEDOW			:Góra Szwedów lighthouse
-STR_LH_GDYNIA_OKSYWIE		:Gdynia Oksywie lighthouse
-STR_LH_JASTARNIA_BOR		:Jastarnia Bór lighthouse
+STR_LH_GORA_SZWEDOW			:Góra Szwedów Lighthouse
+STR_LH_GDYNIA_OKSYWIE		:Gdynia Oksywie Lighthouse
+STR_LH_JASTARNIA_BOR		:Jastarnia Bór Lighthouse
 STR_LH_SOPOT				:Lighthouse from Sopot
 # Lighthouse similar objects
 STR_STAWA_MLYNY				:Stawa Młyny (Świnoujście)
 STR_WISLOUJSCIE				:Wisłoujście Fortress
-STR_BLIZA					:"Bliza"
+STR_BLIZA					:'Blüse'
+# Lighthouses outside Poland
+STR_LH_RONNE				:Lighthouse from Rønne (Bornholm, Denmark)
+STR_LH_DUEODDE				:Lighthouse from Dueodde (Bornholm, Dania)
+STR_LH_BALTIJSK				:Lighthouse from Baltyisk (Kaliningrad Oblast, Russia)
 
 # Object descriptions
 
+# Polish coast existing lighthouses
 STR_LH_SWINOUJSCIE_DESC		:The highest lighthouse in Poland (64,8 metres). There are 308 stairs leading to the top. The lighthouse has been open to the public since 2000.
 STR_LH_KIKUT_DESC			:Fully automated lighthouse on Kikut hill (in Międzyzdroje municipality). It is not open to visitors.
 STR_LH_NIECHORZE_DESC		:The lighthouse in Niechorze, with its garden, is registered as a monument. There is a Miniature Lighthouse Park in its vicinity.
@@ -83,9 +107,13 @@ STR_LH_HORNSUND_DESC		:Lighthouse of the Polish Polar Station Hornsund, on the i
 # Historical lighthouses
 STR_LH_GORA_SZWEDOW_DESC	:Location: between Jastania and Hel. Extinguished in 1990, it is now in a deplorable condition. 
 STR_LH_GDYNIA_OKSYWIE_DESC	:It was extinguished in 1933 and destroyed in 1939. There is now a monument commemorating the lighthouse on its site.
-STR_LH_JASTARNIA_BOR_DESC	:It was extinguished in 1936 (replaced by Szwed's Mountain lighthouse), and destroyed in 1939.
+STR_LH_JASTARNIA_BOR_DESC	:It was extinguished in 1936 (replaced by Góra Szwedów Lighthouse), and destroyed in 1939.
 STR_LH_SOPOT_DESC			:Since 1999 it is not formally a lighthouse but it still illuminates the waters of Gdańsk Bay.
 # Lighthouse similar objects
-STR_STAWA_MLYNY_DESC		:The well-known "Wiatrak" [English: Windmill], a permanent feature in the landscape of Świnoujście.
+STR_STAWA_MLYNY_DESC		:The well-known 'Wiatrak' [English: 'Windmill'], a permanent feature in the landscape of Świnoujście.
 STR_WISLOUJSCIE_DESC		:Its tower served as a lighthouse until 1758. The fortress itself was of military importance until the 19th century.
-STR_BLIZA_DESC				:A wooden crane with a suspended boiler for fire. Used as lighthouses since the Middle Ages.
+STR_BLIZA_DESC				:A simple lighthouse in which the light source is a burning open fire. Used to light the way for ships since the Middle Ages.
+# Lighthouses outside Poland
+STR_LH_RONNE_DESC			:Rønne is the biggest town on Bornholm, an island belonging to Denmark. In 1880, H. Wichmann & Co. built a lighthouse here.
+STR_LH_DUEODDE_DESC			:Built in 1962, the lighthouse is the tallest on Bornholm and in the whole of Denmark. It is also the only Bornholm lighthouse open to the public.
+STR_LH_BALTIJSK_DESC		:The lighthouse located in Baltiysk, lighting the way for ships on the waters of the Vistula Lagoon.

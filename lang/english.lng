@@ -9,24 +9,31 @@ STR_GRF_URL					:{URL}
 # Parameters
 STR_ONLY_SE					:Only Scenario Editor
 STR_ONLY_SE_DESC 			:Enabling this feature makes objects only accessible from the Scenario Editor.
+#
 STR_IRREMOVABLE				:Irremovable objects
-STR_IRREMOVABLE_DESC		:Allows to enable irremovability for some objects.
-STR_IRREMOVABLE_OFF			:none (all can be demolished)
-STR_IRREMOVABLE_EXISTING_LHS:existing lighthouses
-STR_IRREMOVABLE_EXISTING_OBJ:all existing objects
+STR_IRREMOVABLE_DESC		:Allows to enable irremovability for some or all objects.
+STR_IRREMOVABLE_OFF			:none
+STR_IRREMOVABLE_EXISTING	:today's objects
 STR_IRREMOVABLE_ALL			:all objects
+#
 STR_ALWAYS_AV				:Always available objects
-STR_ALWAYS_AV_DESC			:Enabling this function will make objects from this set always available. Normally they will be available according to their actual construction (& demolition) dates.
+STR_ALWAYS_AV_DESC			:Enabling this function will make objects from this set always available. At default (when this setting is off) they will be available according to their actual construction (& demolition) dates.
+#
 STR_REBUILT_LHS				:Rebuilt lighthouses
 STR_REBUILT_LHS_DESC		:The conjunction of 'Auto-Rebuilding' and 'Always Available Objects' will cause a lighthouse to show up at a given location only when built in the real world, even if it was placed there earlier in the game.{}Automatic Rebuild also takes into account the 'demolition' of lighthouses that no longer exist in reality, if no new ones have been built in their place. {RED}Not recommended in combination with setting the 'Irremovable objects' parameter to 'all'. {BLACK}(Ruins will remain there)
 STR_AS_SEPARATE_OBJECTS		:the old lighthouse look available as a separate object
 STR_REBUILD_AUTOMATICALLY	:Auto-rebuilding according to actual dates
-STR_FIXED_ANIM				:Fictional animations in lighthouses with fixed light
-STR_FIXED_ANIM_DESC			:Default (when this setting is off) lighthouses that in real life have a fixed light have also fixed light in the game.{}Turning this setting on adds fictional animations to these lighthouses.{}(This setting has an effect only on the few lighthouses that in real life have a fixed light.)
-STR_BASE_ANIM_SPEED			:Base animation speed
-STR_BASE_ANIM_SPEED_DESC	:This setting allows to change the base animation speed. The speed set here can be modified by a multiplier from another setting.
-STR_BASE_ANIM_SPEED_REAL	:realistic
-STR_BASE_ANIM_SPEED_UNI		:unified
+#
+STR_FIXED_ANIM				:Rozewie II Lighthouse animation
+#STR_FIXED_ANIM				:Fictional animations in lighthouses with fixed light
+STR_FIXED_ANIM_DESC			:This setting allows to change the type of animation in the Rozewie II lighthouse, which in the real world have fixed light.
+#STR_FIXED_ANIM_DESC		:Default (when this setting is off) lighthouses that in real life have a fixed light have also fixed light in the game.{}Turning this setting on adds fictional animations to these lighthouses.{}(This setting has an effect only on the few lighthouses that in real life have a fixed light.)
+STR_FIXED_ANIM_FIXED		:fixed light
+STR_FIXED_ANIM_ANIM			:flashing light
+#
+STR_UNIFIED_ANIM_SPEED		:Unified animation speed
+STR_UNIFIED_ANIM_SPEED_DESC	:The rotation of light in some lighthouses is much faster or much slower than in others. Switching this setting on makes the speed of light rotation standardised for all lighthouses.
+#
 STR_ANIM_SPEED				:Animation speed multiplier
 STR_ANIM_SPEED_DESC			:Allows to further speed up or slow down animations in lighthouses within some limits.
 STR_ANIM_SPEED_1_16			:{RED}x1/16
@@ -57,8 +64,8 @@ STR_LH_JAROSLAWIEC			:Lighthouse from Jarosławiec
 STR_LH_USTKA				:Lighthouse from Ustka
 STR_LH_CZOLPINO				:Lighthouse from Czołpino
 STR_LH_STILO				:Lighthouse from Stilo
-STR_LH_ROZEWIE_OLD			:Old lighthouse from Rozewie
-STR_LH_ROZEWIE_NEW			:New lighthouse from Rozewie
+STR_LH_ROZEWIE_OLD			:Rozewie I lighthouse
+STR_LH_ROZEWIE_NEW			:Rozewie II lighthouse
 STR_LH_JASTARNIA			:Lighthouse from Jastarnia
 STR_LH_HEL					:Lighthouse from Hel
 STR_LH_GDANSK_NEW			:Gdańsk New Port Lighthouse

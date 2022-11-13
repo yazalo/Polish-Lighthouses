@@ -18,13 +18,12 @@ grf {
 		type:    	int;
 		name:    	string(STR_IRREMOVABLE);
 		desc:    	string(STR_IRREMOVABLE_DESC);	
-		max_value:	3;
-        def_value:	1;		
+		max_value:	2;
+        def_value:	0;		
  			names: {
  				0:	string(STR_IRREMOVABLE_OFF);
- 				1:	string(STR_IRREMOVABLE_EXISTING_LHS);
-				2:	string(STR_IRREMOVABLE_EXISTING_OBJ);
- 				3:	string(STR_IRREMOVABLE_ALL);
+				1:	string(STR_IRREMOVABLE_EXISTING);
+ 				2:	string(STR_IRREMOVABLE_ALL);
  			};
 		}
 	}
@@ -52,24 +51,23 @@ grf {
 	}*/
 	param {
 		param_fixed_anim {
-		type:    	bool;	
+		type:    	int;	
 		name:    	string(STR_FIXED_ANIM);
 		desc:    	string(STR_FIXED_ANIM_DESC);
-        def_value:	0;
+		max_value: 1;
+        def_value: 0;			
+ 			names: {
+ 				0: string(STR_FIXED_ANIM_FIXED);
+ 				1: string(STR_FIXED_ANIM_ANIM);
+ 			};
 		}
 	}
 	param {
 		param_anim_base_speed {
-		name:		string(STR_BASE_ANIM_SPEED);
-		desc:    	string(STR_BASE_ANIM_SPEED_DESC);
-		type:		int;
-		min_value:	0;
-		max_value:	1;
+		name:		string(STR_UNIFIED_ANIM_SPEED);
+		desc:    	string(STR_UNIFIED_ANIM_SPEED_DESC);
+		type:		bool;
         def_value:	0;
-			names: {
- 				0:	string(STR_BASE_ANIM_SPEED_REAL);
- 				1:	string(STR_BASE_ANIM_SPEED_UNI);
-			};
 		}
 	}
 	param {
@@ -77,8 +75,8 @@ grf {
 		name:		string(STR_ANIM_SPEED);
 		desc:    	string(STR_ANIM_SPEED_DESC);
 		type:		int;
-		min_value:	0;
-		max_value:	10;
+		min_value:	2;
+		max_value:	6;
         def_value:	4;
 			names: {
  				0:	string(STR_ANIM_SPEED_1_16);
@@ -1230,7 +1228,7 @@ item (FEAT_OBJECTS, lh_gora_szwedow, 030) {
         remove_cost_multiplier: 16;
         introduction_date:      (param_always_av==1) ? 0 : date(1950,1,1);
         end_of_life_date:       0xFFFFFFFF;
-		object_flags:			(param_only_se>0 && param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
+		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
 		animation_info:			[ANIMATION_LOOPING,10];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
@@ -1269,7 +1267,7 @@ item (FEAT_OBJECTS, lh_gdynia_oksywie, 031) {
         remove_cost_multiplier: 16;
         introduction_date:      (param_always_av==1) ? 0 : date(1950,1,1);
         end_of_life_date:       0xFFFFFFFF;
-		object_flags:			(param_only_se>0 && param_irremovable>2) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>2) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
+		object_flags:			(param_only_se>0 && param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
 		animation_info:			[ANIMATION_LOOPING,10];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
@@ -1308,7 +1306,7 @@ item (FEAT_OBJECTS, lh_jastarnia_bor, 032) {
         remove_cost_multiplier: 16;
         introduction_date:      (param_always_av==1) ? 0 : date(1950,1,1);
         end_of_life_date:       0xFFFFFFFF;
-		object_flags:			(param_only_se>0 && param_irremovable>2) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>2) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
+		object_flags:			(param_only_se>0 && param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
 		animation_info:			[ANIMATION_LOOPING,10];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
@@ -1369,7 +1367,7 @@ item (FEAT_OBJECTS, lh_sopot, 033) {
         remove_cost_multiplier: 16;
         introduction_date:      (param_always_av==1) ? 0 : date(1904,1,1);
         end_of_life_date:       0xFFFFFFFF;
-		object_flags:			(param_only_se>0 && param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
+		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
 		animation_info:			[ANIMATION_LOOPING,35];	//flashing
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
@@ -1409,7 +1407,7 @@ item (FEAT_OBJECTS, stawa_mlyny, 040) {
         remove_cost_multiplier: 16;
         introduction_date:      (param_always_av==1) ? 0 : date(1950,1,1);
         end_of_life_date:       0xFFFFFFFF;
-		object_flags:			(param_only_se>0 && param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
+		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
 		animation_info:			[ANIMATION_LOOPING,10];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
@@ -1491,7 +1489,7 @@ item (FEAT_OBJECTS, bliza, 041) {
         remove_cost_multiplier: 16;
         introduction_date:      (param_always_av==1) ? 0 : date(1300,1,1);
         end_of_life_date:       0xFFFFFFFF;
-		object_flags:			(param_only_se>0 && param_irremovable>2) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>2) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
+		object_flags:			(param_only_se>0 && param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>1) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
         height:                 4;
         num_views:              4;
     }

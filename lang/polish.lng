@@ -9,24 +9,31 @@ STR_GRF_URL					:https://openttd-polska.pl/Thread-Inne-Polskie-latarnie-morskie
 # Parameters
 STR_ONLY_SE					:Tylko edytor scenariuszy
 STR_ONLY_SE_DESC			:Włączenie tej funkcji powoduje, że obiekty dostępne są tylko z poziomu edytora scenariuszy.
+#
 STR_IRREMOVABLE				:Nieusuwalne obiekty
-STR_IRREMOVABLE_DESC		:Pozwala włączyć nieusuwalność dla niektórych obiektów.
-STR_IRREMOVABLE_OFF			:żadne (wszystkie można zburzyć)
-STR_IRREMOVABLE_EXISTING_LHS:istniejące obecnie latarnie morskie
-STR_IRREMOVABLE_EXISTING_OBJ:wszystkie istniejące obecnie obiekty
+STR_IRREMOVABLE_DESC		:Pozwala włączyć nieusuwalność dla niektórych lub wszystkich obiektów.
+STR_IRREMOVABLE_OFF			:żadne
+STR_IRREMOVABLE_EXISTING	:współczesne obiekty
 STR_IRREMOVABLE_ALL			:wszystkie obiekty
+#
 STR_ALWAYS_AV				:Obiekty zawsze dostępne
-STR_ALWAYS_AV_DESC			:Włączenie tej funkcji spowoduje, że obiekty z tego setu będą dostępne zawsze. Normalnie będą dostępne wg rzeczywistych dat wybudowania (wyburzenia).
+STR_ALWAYS_AV_DESC			:Włączenie tej funkcji spowoduje, że obiekty z tego setu będą dostępne zawsze. Domyślnie (kiedy to ustawienie jest wyłączone) będą dostępne wg rzeczywistych dat wybudowania (wyburzenia).
+#
 STR_REBUILT_LHS				:Przebudowane latarnie
 STR_REBUILT_LHS_DESC		:Połączenie opcji "Automatyczna przebudowa" i "Obiekty zawsze dostępne" spowoduje, że latarnia pojawi się w danym miejscu dopiero w momencie wybudowania w realnym świecie, nawet, jeśli w grze umieszczono ją tam wcześniej.{}Automatyczna przebudowa uwzględnia także "wyburzanie" latarni, które w rzeczywistości już nie istnieją, jeśli na ich miejscu nie powstały nowe. {RED}Niezalecane w połączeniu z ustawieniem parametru "Nieusuwalne obiekty" na "wszystkie". {BLACK}(Pozostaną tam ruiny).
 STR_AS_SEPARATE_OBJECTS		:dawny wygląd latarni dostępny jako osobny obiekt
 STR_REBUILD_AUTOMATICALLY	:automatyczna przebudowa wg rzeczywistych dat
-STR_FIXED_ANIM				:Fikcyjne animacje w latarniach ze światłem stałym
-STR_FIXED_ANIM_DESC			:Domyślnie (kiedy to ustawienie jest wyłączone) latarnie, które w rzeczywistości świecą światłem stałym, w grze także są tak zaprogramowane.{}Włączenie tego ustawienia wprowadza fikcyjne animacje do tych latarni.{}(To ustawienie wpływa tylko na te nieliczne latarnie, które w rzeczywistości świecą światłem stałym)
-STR_BASE_ANIM_SPEED			:Bazowa prędkość animacji
-STR_BASE_ANIM_SPEED_DESC	:To ustawienie pozwala zmienić bazową prędkość animacji. Ustawiona tu prędkość może być modyfikowana mnożnikiem z innego ustawienia.
-STR_BASE_ANIM_SPEED_REAL	:realistyczna
-STR_BASE_ANIM_SPEED_UNI		:ujednolicona
+#
+STR_FIXED_ANIM				:Animacja latarni Rozewie II
+#STR_FIXED_ANIM				:Fikcyjne animacje w latarniach ze światłem stałym
+STR_FIXED_ANIM_DESC			:To ustawienie pozwala zmienić rodzaj animacji w latarnii Rozewie II, która w rzeczywistości świeci światłem stałym.
+#STR_FIXED_ANIM_DESC		:Domyślnie (kiedy to ustawienie jest wyłączone) latarnie, które w rzeczywistości świecą światłem stałym, w grze także są tak zaprogramowane.{}Włączenie tego ustawienia wprowadza fikcyjne animacje do tych latarni.{}(To ustawienie wpływa tylko na te nieliczne latarnie, które w rzeczywistości świecą światłem stałym)
+STR_FIXED_ANIM_FIXED		:światło stałe
+STR_FIXED_ANIM_ANIM			:światło pulsujące
+#
+STR_UNIFIED_ANIM_SPEED		:Ujednolicona prędkość animacji
+STR_UNIFIED_ANIM_SPEED_DESC	:Obrót światła w niektórych latarniach jest znacznie szybszy lub znacznie wolniejszy niż w pozostałych. Włączenie tego ustawienie ujednolica prędkość obrotu światła we wszystkich latarniach.
+#
 STR_ANIM_SPEED				:Mnożnik prędkości animacji
 STR_ANIM_SPEED_DESC			:Pozwala dodatkowo przyspieszyć lub spowolnić animacje w latarniach w pewnych granicach.
 STR_ANIM_SPEED_1_16			:{RED}x1/16
@@ -57,8 +64,8 @@ STR_LH_JAROSLAWIEC			:Latarnia morska z Jarosławca
 STR_LH_USTKA				:Latarnia morska z Ustki
 STR_LH_CZOLPINO				:Latarnia morska z Czołpina
 STR_LH_STILO				:Latarnia morska ze Stilo
-STR_LH_ROZEWIE_OLD			:Stara latarnia morska z Rozewia
-STR_LH_ROZEWIE_NEW			:Nowa latarnia morska z Rozewia
+STR_LH_ROZEWIE_OLD			:Latarnia morska Rozewie I
+STR_LH_ROZEWIE_NEW			:Latarnia morska Rozewie II
 STR_LH_JASTARNIA			:Latarnia morska z Jastarni
 STR_LH_HEL					:Latarnia morska z Helu
 STR_LH_GDANSK_NEW			:Latarnia morska Gdańsk Nowy Port

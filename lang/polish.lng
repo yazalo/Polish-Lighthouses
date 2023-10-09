@@ -2,9 +2,9 @@
 # This is the Polish language file
 
 # GRF name and description definitions
-STR_GRF_NAME        		:{NAME} by yazalo (v {VERSION}) - Polskie latarnie morskie
+STR_GRF_NAME        		:{NAME} (v {VERSION}) - Polskie latarnie morskie
 STR_GRF_DESCRIPTION 		:Zestaw latarń morskich wzorowanych (nie tylko) na prawdziwych latarniach z polskiego wybrzeża{}{COPYRIGHT} yazalo, 2021-2022{}Licencja: GPL v3 / CC BY-SA 4.0
-STR_GRF_URL					:https://openttd-polska.pl/Thread-Inne-Polskie-latarnie-morskie
+STR_GRF_URL					:{URL}
 
 # Parameters
 STR_ONLY_SE					:Tylko edytor scenariuszy
@@ -117,7 +117,7 @@ STR_LH_GDYNIA_OKSYWIE_DESC	:Została wygaszona w 1933 roku, a zniszczona w 1939 
 STR_LH_JASTARNIA_BOR_DESC	:Została wygaszona w 1936 roku (zastąpiona latarnią Góra Szwedów), a zniszczona w 1939 roku.
 STR_LH_SOPOT_DESC			:Od 1999 roku nie jest formalnie latarnią morską, lecz wciąż oświetla wody Zatoki Gdańskiej.
 # Lighthouse similar objects
-STR_STAWA_MLYNY_DESC		:Znany wszystkim "Wiatrak", na stałe wpisany w krajobraz Świnoujścia.
+STR_STAWA_MLYNY_DESC		:Dobrze wszystkim znany "Wiatrak", na stałe wpisany w krajobraz Świnoujścia.
 STR_WISLOUJSCIE_DESC		:Jej wieża do 1758 roku służyła jako latarnia morska. Sama twierdza aż do XIX wieku miała znaczenie militarne.
 STR_BLIZA_DESC				:Prosta latarnia morska, w której źródłem światła jest płonący otwarty ogień. Stosowana do oświetlania drogi statkom już od średniowiecza.
 # Lighthouses outside Poland

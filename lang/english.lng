@@ -2,7 +2,7 @@
 # This is the English language file
 
 # GRF name and description definitions
-STR_GRF_NAME        		:{NAME} by yazalo (v {VERSION})
+STR_GRF_NAME        		:{NAME} (v {VERSION})
 STR_GRF_DESCRIPTION 		:Set of lighthouses based on real lighthouses from (not only) the Polish coast.{}Drawn, coded and {COPYRIGHT} by yazalo, 2021-2022{}License: GPL v3 / CC BY-SA 4.0
 STR_GRF_URL					:{URL}
 
@@ -117,7 +117,7 @@ STR_LH_GDYNIA_OKSYWIE_DESC	:It was extinguished in 1933 and destroyed in 1939. T
 STR_LH_JASTARNIA_BOR_DESC	:It was extinguished in 1936 (replaced by Góra Szwedów Lighthouse), and destroyed in 1939.
 STR_LH_SOPOT_DESC			:Since 1999 it is not formally a lighthouse but it still illuminates the waters of Gdańsk Bay.
 # Lighthouse similar objects
-STR_STAWA_MLYNY_DESC		:The well-known 'Wiatrak' [English: 'Windmill'], a permanent feature in the landscape of Świnoujście.
+STR_STAWA_MLYNY_DESC		:The well-known 'Wiatrak' ('Windmill'), a permanent feature in the skyline of Świnoujście.
 STR_WISLOUJSCIE_DESC		:Its tower served as a lighthouse until 1758. The fortress itself was of military importance until the 19th century.
 STR_BLIZA_DESC				:A simple lighthouse in which the light source is a burning open fire. Used to light the way for ships since the Middle Ages.
 # Lighthouses outside Poland

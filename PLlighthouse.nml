@@ -2,8 +2,8 @@ grf {
 	grfid: "yz\00\00";		//797A0000
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESCRIPTION);
-	version: 1;
-	min_compatible_version: 1;
+	version: 3;
+	min_compatible_version: 3;
 	url: string(STR_GRF_URL);
 	param {
 		param_only_se {
@@ -36,6 +36,7 @@ grf {
 		}
 	}
 	/*
+	
 	param {
 		param_rebuilt_lh {
 		type:    int;
@@ -103,6 +104,10 @@ template template_lh (filename){		//universal lighthouse template
 	[398, 9, 64, 150, -31, -119, filename+".png"]
 	[2, 51, 64, 58, -31, -26, filename+".png"]		//purchase menu graphic (6.)
 }
+template template_simple_object (filename){		//simple object template
+	[72, 3, 64, 100, -31, -69, filename+".png"]
+	[5, 3, 64, 58, -31, -26, filename+".png"]		//purchase menu graphic (1.)
+}
 template template_lh_special_anim (filename){	//template for lighthouses with special animations
 	[68, 9, 64, 150, -31, -119, filename+".png"]
 	[134, 9, 64, 150, -31, -119, filename+".png"]
@@ -168,7 +173,7 @@ item (FEAT_OBJECTS, lh_swinoujscie, 001) {
         introduction_date:      (param_always_av==1) ? 0 : date(1805,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,6];	//rotating
+		animation_info:			[ANIMATION_LOOPING,6];
 		animation_speed:		((param_anim_base_speed==1?4:5)+4-param_anim_speed<0?0:5+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 17;
@@ -207,7 +212,7 @@ item (FEAT_OBJECTS, lh_kikut, 002) {
         introduction_date:      (param_always_av==1) ? 0 : date(1962,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,12];	//rotating
+		animation_info:			[ANIMATION_LOOPING,12];
 		animation_speed:		((param_anim_base_speed==1?4:5)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:5)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 1;
@@ -246,7 +251,7 @@ item (FEAT_OBJECTS, lh_niechorze, 003) {
         introduction_date:      (param_always_av==1) ? 0 : date(1866,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,20];	//rotating
+		animation_info:			[ANIMATION_LOOPING,20];
 		animation_speed:		((param_anim_base_speed==1?4:4)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:4)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 5;
@@ -306,7 +311,7 @@ item (FEAT_OBJECTS, lh_kolobrzeg, 004) {
         introduction_date:      (param_always_av==1) ? 0 : date(1666,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,6];	//rotating
+		animation_info:			[ANIMATION_LOOPING,6];
 		animation_speed:		((param_anim_base_speed==1?4:5)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:5)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 1;
@@ -345,7 +350,7 @@ item (FEAT_OBJECTS, lh_gaski, 005) {
         introduction_date:      (param_always_av==1) ? 0 : date(1950,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,22];	//rotating
+		animation_info:			[ANIMATION_LOOPING,22];
 		animation_speed:		((param_anim_base_speed==1?4:4)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:4)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 13;
@@ -384,7 +389,7 @@ item (FEAT_OBJECTS, lh_darlowo, 006) {
         introduction_date:      (param_always_av==1) ? 0 : date(1715,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING, 150];	//flashing
+		animation_info:			[ANIMATION_LOOPING, 150];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 6;
@@ -422,7 +427,7 @@ item (FEAT_OBJECTS, lh_jaroslawiec, 007) {
         introduction_date:      (param_always_av==1) ? 0 : date(1838,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,36];	//rotating
+		animation_info:			[ANIMATION_LOOPING,36];
 		animation_speed:		((param_anim_base_speed==1?4:3)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:3)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 9;
@@ -461,7 +466,7 @@ item (FEAT_OBJECTS, lh_ustka, 008) {
         introduction_date:      (param_always_av==1) ? 0 : date(1871,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,55];	//flashing
+		animation_info:			[ANIMATION_LOOPING,55];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 5;
@@ -500,7 +505,7 @@ item (FEAT_OBJECTS, lh_czolpino, 009) {
         introduction_date:      (param_always_av==1) ? 0 : date(1875,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,72];	//flashing
+		animation_info:			[ANIMATION_LOOPING,72];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 7;
@@ -539,7 +544,7 @@ item (FEAT_OBJECTS, lh_stilo, 010) {
         introduction_date:      (param_always_av==1) ? 0 : date(1906,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,105];	//rotating
+		animation_info:			[ANIMATION_LOOPING,105];
 		animation_speed:		((param_anim_base_speed==1?4:2)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:2)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 9;
@@ -554,7 +559,7 @@ item (FEAT_OBJECTS, lh_stilo, 010) {
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
 }
-// Rozewie (old)
+// Rozewie I (old)
 spriteset (ss_rozewie_old) {
 	template_lh("gfx/rozewie_old")
 }
@@ -578,7 +583,7 @@ item (FEAT_OBJECTS, lh_rozewie_old, 011) {
         introduction_date:      (param_always_av==1) ? 0 : date(1821,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,27];	//rotating
+		animation_info:			[ANIMATION_LOOPING,27];
 		animation_speed:		((param_anim_base_speed==1?4:2)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:2)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 9;
@@ -593,122 +598,74 @@ item (FEAT_OBJECTS, lh_rozewie_old, 011) {
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
 }
-// Rozewie (new)
-spriteset (ss_rozewie_new_a_anim) {
-	template_lh("gfx/rozewie_new_a_anim")
+// Rozewie II (new)
+spriteset (ss_rozewie_new_a) {
+	template_lh("gfx/rozewie_new_a")
 }
-spriteset (ss_rozewie_new_b_anim) {
-	template_lh("gfx/rozewie_new_b_anim")
+spriteset (ss_rozewie_new_b) {
+	template_lh("gfx/rozewie_new_b")
 }
-spriteset (ss_rozewie_new_c_anim) {
-	template_lh("gfx/rozewie_new_c_anim")
+spriteset (ss_rozewie_new_c) {
+	template_lh("gfx/rozewie_new_c")
 }
-spriteset (ss_rozewie_new_d_anim) {
-	template_lh("gfx/rozewie_new_d_anim")
+spriteset (ss_rozewie_new_d) {
+	template_lh("gfx/rozewie_new_d")
 }
-spriteset (ss_rozewie_new_a_fixed) {
-	template_lh("gfx/rozewie_new_a_fixed")
-}
-spriteset (ss_rozewie_new_b_fixed) {
-	template_lh("gfx/rozewie_new_b_fixed")
-}
-spriteset (ss_rozewie_new_c_fixed) {
-	template_lh("gfx/rozewie_new_c_fixed")
-}
-spriteset (ss_rozewie_new_d_fixed) {
-	template_lh("gfx/rozewie_new_d_fixed")
-}
-spritelayout sl_rozewie_new_a_anim (state) {
+spritelayout sl_rozewie_new_a(state) {
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_rozewie_new_a_anim(state);
+		sprite: ss_rozewie_new_a(state);
 		zextent: 42;
 		}
 }
-spritelayout sl_rozewie_new_b_anim (state) {
+spritelayout sl_rozewie_new_b(state) {
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_rozewie_new_b_anim(state);
+		sprite: ss_rozewie_new_b(state);
 		zextent: 42;
 		}
 }
-spritelayout sl_rozewie_new_c_anim (state) {
+spritelayout sl_rozewie_new_c(state) {
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_rozewie_new_c_anim(state);
+		sprite: ss_rozewie_new_c(state);
 		zextent: 42;
 		}
 }
-spritelayout sl_rozewie_new_d_anim (state) {
+spritelayout sl_rozewie_new_d (state) {
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_rozewie_new_d_anim(state);
-		zextent: 42;
-		}
-}
-spritelayout sl_rozewie_new_a_fixed (state) {
-	ground {
-        sprite: GROUNDSPRITE_NORMAL;		
-	}
-	building {
-		sprite: ss_rozewie_new_a_fixed(state);
-		zextent: 42;
-		}
-}
-spritelayout sl_rozewie_new_b_fixed (state) {
-	ground {
-        sprite: GROUNDSPRITE_NORMAL;		
-	}
-	building {
-		sprite: ss_rozewie_new_b_fixed(state);
-		zextent: 42;
-		}
-}
-spritelayout sl_rozewie_new_c_fixed (state) {
-	ground {
-        sprite: GROUNDSPRITE_NORMAL;		
-	}
-	building {
-		sprite: ss_rozewie_new_c_fixed(state);
-		zextent: 42;
-		}
-}
-spritelayout sl_rozewie_new_d_fixed (state) {
-	ground {
-        sprite: GROUNDSPRITE_NORMAL;		
-	}
-	building {
-		sprite: ss_rozewie_new_d_fixed(state);
+		sprite: ss_rozewie_new_d(state);
 		zextent: 42;
 		}
 }
 switch (FEAT_OBJECTS, SELF, switch_rozewie_new_view_p, view) {
-    0:  sl_rozewie_new_a_fixed(6);
-	1:	sl_rozewie_new_b_fixed(6);
-	2:	sl_rozewie_new_c_fixed(6);
-		sl_rozewie_new_d_fixed(6);
+    0:  sl_rozewie_new_a(6);
+	1:	sl_rozewie_new_a(6);
+	2:	sl_rozewie_new_a(6);
+		sl_rozewie_new_a(6);
 }
 switch (FEAT_OBJECTS, SELF, switch_rozewie_new_view_anim, view) {
 
-    0:  sl_rozewie_new_a_anim(animation_frame<6?animation_frame:0);
-    1:	sl_rozewie_new_b_anim(animation_frame<6?animation_frame:0);
-	2:	sl_rozewie_new_c_anim(animation_frame<6?animation_frame:0);
-		sl_rozewie_new_d_anim(animation_frame<6?animation_frame:0);
+    0:  sl_rozewie_new_a(animation_frame<6?animation_frame:0);
+    1:	sl_rozewie_new_b(animation_frame<6?animation_frame:0);
+	2:	sl_rozewie_new_c(animation_frame<6?animation_frame:0);
+		sl_rozewie_new_d(animation_frame<6?animation_frame:0);
 }
 switch (FEAT_OBJECTS, SELF, switch_rozewie_new_view_fixed, view) {
 
-    0:  sl_rozewie_new_a_fixed(animation_frame<6?animation_frame:0);
-    1:	sl_rozewie_new_b_fixed(animation_frame<6?animation_frame:0);
-	2:	sl_rozewie_new_c_fixed(animation_frame<6?animation_frame:0);
-		sl_rozewie_new_d_fixed(animation_frame<6?animation_frame:0);
+    0:  sl_rozewie_new_a(5);
+    1:	sl_rozewie_new_b(5);
+	2:	sl_rozewie_new_c(5);
+		sl_rozewie_new_d(5);
 }
 switch (FEAT_OBJECTS, SELF, switch_rozewie_new_anim_type, param_fixed_anim) {
 
@@ -813,7 +770,7 @@ item (FEAT_OBJECTS, lh_jastarnia, 013) {
         introduction_date:      (param_always_av==1) ? 0 : date(1949,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,17];	//rotating
+		animation_info:			[ANIMATION_LOOPING,17];
 		animation_speed:		((param_anim_base_speed==1?4:5)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:5)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 4;
@@ -829,17 +786,65 @@ item (FEAT_OBJECTS, lh_jastarnia, 013) {
 		}
 }
 // Hel
-spriteset (ss_hel) {
-	template_lh("gfx/hel")
+spriteset (ss_hel_ne) {
+	template_lh("gfx/hel_ne")
 }
-spritelayout sl_hel (state) {
+spriteset (ss_hel_nw) {
+	template_lh("gfx/hel_nw")
+}
+spriteset (ss_hel_se) {
+	template_lh("gfx/hel_se")
+}
+spriteset (ss_hel_sw) {
+	template_lh("gfx/hel_sw")
+}
+spritelayout sl_hel_ne (state) {
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_hel(state);
+		sprite: ss_hel_ne(state);
 		zextent: 93;
 		}
+}
+spritelayout sl_hel_nw (state) {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;		
+	}
+	building {
+		sprite: ss_hel_nw(state);
+		zextent: 93;
+		}
+}
+spritelayout sl_hel_se (state) {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;		
+	}
+	building {
+		sprite: ss_hel_se(state);
+		zextent: 93;
+		}
+}
+spritelayout sl_hel_sw (state) {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;		
+	}
+	building {
+		sprite: ss_hel_sw(state);
+		zextent: 93;
+		}
+}
+switch (FEAT_OBJECTS, SELF, switch_hel_view_p, view) {
+    0:  sl_hel_nw(6);
+	1:	sl_hel_ne(6);
+	2:	sl_hel_sw(6);
+		sl_hel_se(6);
+}
+switch (FEAT_OBJECTS, SELF, switch_hel_view, view) {
+    0:  sl_hel_nw(animation_frame);
+	1:	sl_hel_ne(animation_frame);
+	2:	sl_hel_sw(animation_frame);
+		sl_hel_se(animation_frame);
 }
 item (FEAT_OBJECTS, lh_hel, 014) {
     property {
@@ -852,17 +857,16 @@ item (FEAT_OBJECTS, lh_hel, 014) {
         introduction_date:      (param_always_av==1) ? 0 : date(1942,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,6];	//rotating
+		animation_info:			[ANIMATION_LOOPING,6];
 		animation_speed:		((param_anim_base_speed==1?4:5)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:5)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 11;
-        num_views:              1;
+        num_views:              4;
     }
     graphics {
-		
-	    default:          	sl_hel(animation_frame);
+	    default:          	switch_hel_view;
         additional_text:    string(STR_LH_HEL_DESC);
-		purchase:			sl_hel(6);
+		purchase:			switch_hel_view_p;
 		anim_control:		return CB_RESULT_NEXT_FRAME;
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
@@ -891,7 +895,7 @@ item (FEAT_OBJECTS, lh_gdansk_new, 015) {
         introduction_date:      (param_always_av==1) ? 0 : date(1894,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,250];	//flashing
+		animation_info:			[ANIMATION_LOOPING,250];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 1;
@@ -930,7 +934,7 @@ item (FEAT_OBJECTS, lh_gdansk_north, 016) {
         introduction_date:      (param_always_av==1) ? 0 : date(1984,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,80];	//flashing
+		animation_info:			[ANIMATION_LOOPING,80];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 17;
@@ -958,9 +962,6 @@ spritelayout sl_krynica (state) {
 		zextent: 64;
 		}
 }
-/*
-DOTĄD ANIMACJE SPRAWDZONE
-*/
 item (FEAT_OBJECTS, lh_krynica, 017) {
     property {
         class:                  "YPLH";
@@ -972,7 +973,7 @@ item (FEAT_OBJECTS, lh_krynica, 017) {
         introduction_date:      (param_always_av==1) ? 0 : date(1951,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,19];	//rotating
+		animation_info:			[ANIMATION_LOOPING,19];
 		animation_speed:		((param_anim_base_speed==1?4:4)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:4)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 7;
@@ -1012,7 +1013,7 @@ item (FEAT_OBJECTS, lh_baltijsk, 110) {
         introduction_date:      (param_always_av==1) ? 0 : date(1813,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,110];	//flashing
+		animation_info:			[ANIMATION_LOOPING,110];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 8;
@@ -1072,7 +1073,7 @@ item (FEAT_OBJECTS, lh_ronne, 170) {
         introduction_date:      (param_always_av==1) ? 0 : date(1846,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,6];	//rotating
+		animation_info:			[ANIMATION_LOOPING,6];
 		animation_speed:		((param_anim_base_speed==1?4:4)+4-param_anim_speed<0?0:(param_anim_base_speed==1?4:4)+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 5;
@@ -1111,7 +1112,7 @@ item (FEAT_OBJECTS, lh_dueodde, 171) {
         introduction_date:      (param_always_av==1) ? 0 : date(1962,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,90];	//flashing
+		animation_info:			[ANIMATION_LOOPING,90];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 8;
@@ -1127,7 +1128,7 @@ item (FEAT_OBJECTS, lh_dueodde, 171) {
 		}
 }
 /*
-// Arctowski (polar station in Antartica) [unfinished]
+// Arctowski (polar station in Antartica)
 spriteset (ss_arctowski) {
 	template_lh("gfx/nd")
 }
@@ -1166,7 +1167,7 @@ item (FEAT_OBJECTS, lh_arctowski, 020) {
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
 }
-// Hornsund (polar station in Arctica) [unfinished]
+// Hornsund (polar station in Arctica)
 spriteset (ss_hornsund) {
 	template_lh("gfx/nd")
 }
@@ -1205,7 +1206,7 @@ item (FEAT_OBJECTS, lh_hornsund, 021) {
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
 }
-// Gora Szwedow [unfinished]
+// Góra Szwedów
 spriteset (ss_gora_szwedow) {
 	template_lh("gfx/nd")
 }
@@ -1244,7 +1245,7 @@ item (FEAT_OBJECTS, lh_gora_szwedow, 030) {
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
 }
-// Gdynia Oksywie [unfinished]
+// Gdynia Oksywie
 spriteset (ss_gdynia_oksywie) {
 	template_lh("gfx/nd")
 }
@@ -1283,7 +1284,7 @@ item (FEAT_OBJECTS, lh_gdynia_oksywie, 031) {
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
 }
-// Jastarnia Bor [unfinished]
+// Jastarnia Bor
 spriteset (ss_jastarnia_bor) {
 	template_lh("gfx/nd")
 }
@@ -1349,8 +1350,8 @@ spritelayout sl_sopot_n (state) {
 		}
 }
 switch (FEAT_OBJECTS, SELF, switch_sopot_view_p, view) {
-    0:  sl_sopot_w(6);
-    sl_sopot_n(6);
+    0:  sl_sopot_n(6);
+    sl_sopot_w(6);
 }
 switch (FEAT_OBJECTS, SELF, switch_sopot_view, view) {
 
@@ -1368,7 +1369,7 @@ item (FEAT_OBJECTS, lh_sopot, 033) {
         introduction_date:      (param_always_av==1) ? 0 : date(1904,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,35];	//flashing
+		animation_info:			[ANIMATION_LOOPING,35];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
         height:                 1;
@@ -1383,19 +1384,66 @@ item (FEAT_OBJECTS, lh_sopot, 033) {
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
 }
-/*
-// Stawa Mlyny [unfinished]
-spriteset (ss_stawa_mlyny) {
-	template_lh("gfx/nd")
+// Stawa Młyny
+spriteset (ss_stawa_mlyny_a_n) {
+	template_lh("gfx/stawa_mlyny_a_n")
 }
-spritelayout sl_stawa_mlyny (state) {
+spriteset (ss_stawa_mlyny_a_s) {
+	template_lh("gfx/stawa_mlyny_a_s")
+}
+spriteset (ss_stawa_mlyny_b_n) {
+	template_lh("gfx/stawa_mlyny_b_n")
+}
+spriteset (ss_stawa_mlyny_b_s) {
+	template_lh("gfx/stawa_mlyny_b_s")
+}
+spritelayout sl_stawa_mlyny_a_n (state) {
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_stawa_mlyny(state);
-		zextent: 30;
+		sprite: ss_stawa_mlyny_a_n(state);
+		zextent: 42;
 		}
+}
+spritelayout sl_stawa_mlyny_a_s (state) {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;		
+	}
+	building {
+		sprite: ss_stawa_mlyny_a_s(state);
+		zextent: 42;
+		}
+}
+spritelayout sl_stawa_mlyny_b_n (state) {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;		
+	}
+	building {
+		sprite: ss_stawa_mlyny_b_n(state);
+		zextent: 42;
+		}
+}
+spritelayout sl_stawa_mlyny_b_s (state) {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;		
+	}
+	building {
+		sprite: ss_stawa_mlyny_b_s(state);
+		zextent: 42;
+		}
+}
+switch (FEAT_OBJECTS, SELF, switch_stawa_mlyny_view_p, view) {
+    0:  sl_stawa_mlyny_a_s(6);
+	1:	sl_stawa_mlyny_a_n(6);
+	2:	sl_stawa_mlyny_b_s(6);
+		sl_stawa_mlyny_b_n(6);
+}
+switch (FEAT_OBJECTS, SELF, switch_stawa_mlyny_view, view) {
+    0:  sl_stawa_mlyny_a_s(0);
+	1:	sl_stawa_mlyny_a_n(animation_frame==0||animation_frame==70?1:(animation_frame<70?2:0));
+	2:	sl_stawa_mlyny_b_s(0);
+		sl_stawa_mlyny_b_n(animation_frame==0||animation_frame==70?1:(animation_frame<70?2:0));
 }
 item (FEAT_OBJECTS, stawa_mlyny, 040) {
     property {
@@ -1405,79 +1453,86 @@ item (FEAT_OBJECTS, stawa_mlyny, 040) {
         size:                   [1,1];
         build_cost_multiplier:  16;
         remove_cost_multiplier: 16;
-        introduction_date:      (param_always_av==1) ? 0 : date(1950,1,1);
+        introduction_date:      (param_always_av==1) ? 0 : date(1873,1,1);
         end_of_life_date:       0xFFFFFFFF;
 		object_flags:			(param_only_se>0 && param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_only_se>0) ? bitmask(OBJ_FLAG_ONLY_SE,OBJ_FLAG_ANIMATED) : ((param_irremovable>0) ? bitmask(OBJ_FLAG_IRREMOVABLE,OBJ_FLAG_ANIMATED) : bitmask(OBJ_FLAG_ANIMATED)));
-		animation_info:			[ANIMATION_LOOPING,10];
+		animation_info:			[ANIMATION_LOOPING,92];
 		animation_speed:		(2+4-param_anim_speed<0?0:2+4-param_anim_speed);
 		animation_triggers:		1;
-        height:                 1;
-        num_views:              1;
+        height:                 4;
+        num_views:              4;
     }
     graphics {
 		
-	    default:          	sl_stawa_mlyny(animation_frame==0||animation_frame==2?0:1);
+	    default:          	switch_stawa_mlyny_view;
         additional_text:    string(STR_STAWA_MLYNY_DESC);
-		purchase:			sl_stawa_mlyny(6);
+		purchase:			switch_stawa_mlyny_view_p;
 		anim_control:		return CB_RESULT_NEXT_FRAME;
 		anim_next_frame:	return CB_RESULT_NEXT_FRAME;
 		}
-}*/
+}
 // bilzy, die Feuerblüsen, 'Blüses'
 spriteset (ss_bliza_a) {
-	[ -31, -67, "gfx/bliza_a.png"]
+	template_simple_object("gfx/bliza_a")
 }
 spriteset (ss_bliza_b) {
-	[ -31, -67, "gfx/bliza_b.png"]
+	template_simple_object("gfx/bliza_b")
 }
 spriteset (ss_bliza_c) {
-	[ -31, -67, "gfx/bliza_c.png"]
+	template_simple_object("gfx/bliza_c")
 }
 spriteset (ss_bliza_d) {
-	[ -31, -67, "gfx/bliza_d.png"]
+	template_simple_object("gfx/bliza_d")
 }
-spritelayout sl_bliza_a{
+spritelayout sl_bliza_a(state){
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_bliza_a;
+		sprite: ss_bliza_a(state);
 		zextent: 32;
 		}
 }
-spritelayout sl_bliza_b{
+spritelayout sl_bliza_b(state){
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_bliza_b;
+		sprite: ss_bliza_b(state);
 		zextent: 32;
 		}
 }
-spritelayout sl_bliza_c{
+spritelayout sl_bliza_c(state){
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_bliza_c;
+		sprite: ss_bliza_c(state);
 		zextent: 32;
 		}
 }
-spritelayout sl_bliza_d{
+spritelayout sl_bliza_d(state){
 	ground {
         sprite: GROUNDSPRITE_NORMAL;		
 	}
 	building {
-		sprite: ss_bliza_d;
+		sprite: ss_bliza_d(state);
 		zextent: 32;
 		}
 }
 switch (FEAT_OBJECTS, SELF, switch_bliza_view, view) {
-    0:  sl_bliza_a;
-    1:	sl_bliza_b;
-	2:	sl_bliza_c;
-	3:	sl_bliza_d;
-	sl_bliza_a;
+    0:  sl_bliza_a(0);
+    1:	sl_bliza_b(0);
+	2:	sl_bliza_c(0);
+	3:	sl_bliza_d(0);
+	sl_bliza_a(0);
+}
+switch (FEAT_OBJECTS, SELF, switch_bliza_view_p, view) {
+    0:  sl_bliza_a(1);
+    1:	sl_bliza_b(1);
+	2:	sl_bliza_c(1);
+	3:	sl_bliza_d(1);
+	sl_bliza_a(1);
 }
 item (FEAT_OBJECTS, bliza, 041) {
     property {
@@ -1493,9 +1548,9 @@ item (FEAT_OBJECTS, bliza, 041) {
         height:                 4;
         num_views:              4;
     }
-    graphics {
-		
+    graphics {	
 	    default:          	switch_bliza_view;		//actually not 'view' but 'type'
         additional_text:    string(STR_BLIZA_DESC);
-		}
+		purchase:			switch_bliza_view_p;
+	}
 }
